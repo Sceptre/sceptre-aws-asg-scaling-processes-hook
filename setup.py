@@ -3,16 +3,19 @@ from setuptools import setup, find_packages
 __version__ = "1.0.0"
 
 
-# More information on setting these values: https://github.com/Sceptre/sceptre-hook-template/wiki
+# More information on setting these values:
+# https://github.com/Sceptre/project/wiki/Sceptre-Hook-Template
 
 # lowercase, snakecase, use `-` as separator.
-HOOK_NAME = 'sceptre-hook-template'
+HOOK_NAME = 'sceptre-aws-asg-scaling-processes-hook'
 # the hook call in sceptre e.g. !command_name.
-HOOK_COMMAND_NAME = 'custom_hook'
+HOOK_COMMAND_NAME = 'asg_scaling_processes'
 HOOK_MODULE_NAME = 'hook.{}'.format(HOOK_COMMAND_NAME)  # do not change.
 # CamelCase name of hook class in hook.{HOOK_COMMAND_NAME}.
-HOOK_CLASS = 'CustomHook'
-HOOK_DESCRIPTION = ''  # one line summary description
+HOOK_CLASS = 'ASGScalingProcesses'
+# one line summary description
+HOOK_DESCRIPTION = "AWS Auto Scaling Group Scaling Processes hook."
+" Suspends or resumes autoscaling scaling processes."
 # if multiple use a single string with comma separated names.
 HOOK_AUTHOR = 'Sceptre'
 # if multiple use single string with commas.

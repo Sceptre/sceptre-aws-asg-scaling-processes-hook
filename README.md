@@ -1,14 +1,20 @@
-# README
+# ASG Scaling Processes
 
-Add your hook readme here. Remember to include the following:
+Suspends or resumes autoscaling scaling processes.
 
-- Tell people how to install it (e.g. pip install ...).
-- Be clear about the purpose of the hook, its capabilities and limitations.
-- Tell people how to use it.
-- Give examples of the hook in use.
+Syntax:
 
-Read our wiki to learn how to use this repo:
-https://github.com/Sceptre/project/wiki/Sceptre-Hook-Template
+```yaml
+<hook_point>:
+  - !asg_scaling_processes <suspend|resume>::<process-name>
+```
 
-If you have any questions or encounter an issue
-[please open an issue](https://github.com/Sceptre/project/issues/new)
+Example:
+
+```yaml
+before_update:
+  - !asg_scaling_processes suspend::ScheduledActions
+```
+
+More information on suspend and resume processes can be found in the AWS
+[documentation](http://docs.aws.amazon.com/autoscaling/latest/userguide/as-suspend-resume-processes.html).
