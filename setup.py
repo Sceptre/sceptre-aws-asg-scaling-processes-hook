@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 
 
 # More information on setting these values:
@@ -26,7 +26,7 @@ with open("README.md") as readme_file:
     README = readme_file.read()
 
 install_requirements = [
-    "packaging==16.8",
+    "sceptre>=2.7",
 ]
 
 test_requirements = [
